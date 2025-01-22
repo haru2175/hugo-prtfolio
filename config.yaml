@@ -1,4 +1,4 @@
-baseurl: https://haru2175.github.io/
+baseurl: https://haru2175.github.io
 languageCode: ko-kr
 theme: hugo-theme-stack
 paginate: 5
