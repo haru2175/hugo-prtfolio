@@ -1,0 +1,97 @@
+<header class="site-header">
+    <div class="container">
+        <nav class="navbar">
+            <a href="/" class="logo">
+                <img src="/images/logo.png" class="btn-contact" alt="Logo" style="height: 80px;">
+            </a>
+            <div class="nav-links">
+                <a href="/" class="btn-contact" style="color: #333333;">Home</a>
+                <a href="/Members" class="btn-contact" style="color: #333333;">Members</a>
+                <a href="/Education" class="btn-contact" style="color: #333333;">Education</a>
+                <a href="/Publications" class="btn-contact" style="color: #333333;">Publications</a>
+                <a href="/posts" class="btn-contact" style="color: #333333;">posts</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<style>
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #FFFFFF;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.site-header.hide {
+    transform: translateY(-100%);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+.btn-contact {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #333333;
+}
+
+.btn-contact:hover {
+    background-color: #333333;
+    color: #FFFFFF !important;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+}
+</style>
+
+<script>
+let lastScrollY = window.scrollY;
+
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('.site-header');
+    const currentScrollY = window.scrollY;
+    
+    if (currentScrollY > lastScrollY) {
+        // 스크롤 내릴 때
+        header.classList.add('hide');
+    } else {
+        // 스크롤 올릴 때
+        header.classList.remove('hide');
+    }
+    
+    lastScrollY = currentScrollY;
+});
+</script>

@@ -1,24 +1,28 @@
 baseURL: "https://haru2175.github.io/"
 languageCode: "ko"
-title: "Hugo Theme Stack"
-theme: "roxo-hugo"  # 사용할 테마 이름
+title: "Design Studio Portfolio"
+
+params:
+  description: "Creative Design Studio Portfolio"
+
+markup:
+  highlight:
+    style: github
+
 menu:
-  nav:
+  main:
     - name: "Home"
       url: "/"
       weight: 1
-    - name: "About"
-      url: "/about/"
+    - name: "Members"
+      url: "/Members/"
       weight: 2
-    - name: "Contact"
-      url: "/contact/"
+    - name: "Education"
+      url: "/Education/"
       weight: 3
-    - name: "Blog"
-      url: "/blog/"
+    - name: "Publications"
+      url: "/Publications/"
+      weight: 3
+    - name: "Posts"
+      url: "/Posts/"
       weight: 4
-    - name: "Tags"
-      url: "/tags/"
-      weight: 5
-    - name: "Categories"
-      url: "/categories/"
-      weight: 6

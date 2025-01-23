@@ -1,0 +1,152 @@
+{{ define "main" }}
+<div class="hero-section">
+    <div class="hero-content">
+        <div class="hero-text">
+            <p class="subtitle">Welcome to the Dr.You's Research Group</p>
+            <h1>This is a website to introduce Dr. You's research group.<br>
+            If you're interested in joining this group,<br>
+            please contact: chandryou@yuhs.ac</h1>
+            <div class="hero-buttons">
+                <a href="#works" class="btn btn-mint">See Our Works</a>
+                <a href="#contact" class="btn btn-pink">Connect with Us</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content-section">
+    <div class="container">
+        <div class="section team-section">
+            <h2>Our Team</h2>
+            <div class="team-image">
+                <img src="images/team.jpg" alt="Dr. You's Research Group Team" class="team-photo">
+            </div>
+        </div>
+        
+        <div class="section contact-section">
+            <h2>Contact Us</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <p><a href="mailto:seng.chan.you@ohdsi.org">seng.chan.you@ohdsi.org</a></p>
+                    <p><a href="mailto:chandryou@yuhs.ac">chandryou@yuhs.ac</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>Location</h3>
+                    <p>03722 서울시 서대문구 연세로 50-1</p>
+                    <p>의생명시스템정보학교실 유승찬교수 연구실</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="copyright-section">
+    <p>&copy; 2025 Dr. You's Research Group. All rights reserved.</p>
+</div>
+
+<style>
+.content-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #003976;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h3 {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.team-image {
+    text-align: center;
+}
+
+.team-photo {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-item {
+    text-align: left;
+}
+
+.contact-item p {
+    color: #666;
+    line-height: 1.6;
+    margin: 8px 0;
+}
+
+.contact-item a {
+    color: #003976;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-item a:hover {
+    color: #0056b3;
+}
+
+.copyright-section {
+    background-color: #003976;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+.copyright-section p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .content-section {
+        padding: 40px 0;
+    }
+    
+    .section {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+</style>
+{{ end }}
